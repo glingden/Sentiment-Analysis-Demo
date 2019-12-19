@@ -1,0 +1,75 @@
+
+body{
+	font:15px/1.5 Arial, Helvetica,sans-serif;
+	padding: 0px;
+	background-color: #fff9ff;
+}
+
+
+/* header */
+header{
+	background: #bfbcbc;
+	height: 120px;
+	width: 100%;
+	padding-top: 30px;
+    border-radius: 10px;
+
+
+}
+
+/*center header's text */
+header h2{
+	text-align:center;
+	color: #020202;
+
+}
+
+.ml-container{
+	width: 100%;
+	margin: auto;
+	overflow: hidden;
+}
+
+
+/* form */
+form{
+    margin: 0 auto;
+    text-align: center;
+
+}
+
+
+/* text area */
+textarea {
+
+	width: 300px;
+    height: 100px;
+	border-radius: 5px;
+
+
+}
+
+/* click button */
+.btn-info {
+	text-align: center;
+	background-color: #2196F3;
+	height: 40px;
+	width: 100px;
+	border-radius: 5px;
+	display: block;
+	margin: 0 auto; /* center*/
+}
+
+/*hover for click button */
+.btn-info:hover {
+	background: #54ffc5;
+}
+
+
+/* predicted page */
+.results{
+	border-radius: 5px;
+    margin: 25px auto;
+    text-align: center;
+
+}
