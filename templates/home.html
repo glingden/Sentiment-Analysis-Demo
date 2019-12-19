@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>sentiment_analysis</title>
+	<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/styles.css') }}">
+</head>
+<body>
+
+	<header>
+		<div class="container">
+            <h2>Sentiment Analysis</h2>
+        </div>
+	</header>
+
+	<div class="ml-container">
+
+		<form action="{{ url_for('predict')}}" method="POST">
+            <p>Enter Some Text</p>
+            <textarea name="comment" rows="4" cols="50"></textarea>
+            <input type="submit" class="btn-info" value="Analyse">
+
+	     </form>
+		
+	</div>
+
+
+
+	<div class="results">
+
+       {{ prediction }}
+
+
+	</div>
+
+	
+	
+</body>
+</html>
+
