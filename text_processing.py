@@ -3,9 +3,8 @@
 ##import libraries
 import re
 from nltk import word_tokenize, pos_tag
-from nltk.corpus import stopwords, words,  wordnet
+from nltk.corpus import stopwords,  wordnet
 from nltk.stem import WordNetLemmatizer
-
 
 
 #list of contraction words
@@ -90,18 +89,19 @@ def text_cleaning(text):
     # 4.remove stop words and words with less than 3 letters
     stops_word = set(stopwords.words("english"))
     text = [w for w in text if w in ['no', 'not'] or (
-        w not in stops_word and len(w) >= 3)]  # include ['no', 'not', 'too', 'so']
+        w not in stops_word and len(w) >= 3)]  # include ['no', 'not']
 
     # 4.take only noun, adjective and adverb using POS-tag
     noun_adj_adv = ['NN', 'NNS', 'NNP', 'NNPS', 'JJ', 'JJR', 'JJS', 'RB', 'RBR',
                     'RBS']  # inlcude only noun, adjective and adverb
-    # text = [word for word in text  if pos_tag([word])[0][1] in noun_adj_adv]
+    text = [word for word in text  if pos_tag([word])[0][1] in noun_adj_adv]
 
 
     # 5.lemmatize words based on specific POS-tags
     lema = WordNetLemmatizer()
     lema_words = [lema.lemmatize(word, pos=get_wordnet_pos(pos_tag([word])[0][1])) for word in text if
                   pos_tag([word])[0][1] in noun_adj_adv]
+    #lema_words =[lema.lemmatize(x) for x in text]
     text = " ".join(lema_words)  # return string
 
     return text
