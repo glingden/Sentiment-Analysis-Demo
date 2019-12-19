@@ -11,8 +11,10 @@ from langdetect import detect
 import pickle
 
 #load models
-tfidf_object =  pickle.load(open('/Users/gangalingden/Desktop/ML-Flask-App/Models/tfidf_vect', 'rb')) #tfidf vectorizer
-model =  pickle.load(open('/Users/gangalingden/Desktop/ML-Flask-App/Models/final_logistic', 'rb')) # predicted model
+tfidf_object =  pickle.load(open('Models/tfidf_vect', 'rb')) #tfidf vectorizer
+model =  pickle.load(open('Models/final_logistic', 'rb')) # predicted model
+
+
 
 app = Flask(__name__)
 
