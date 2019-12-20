@@ -2,6 +2,7 @@
 <html>
 <head>
 	<title>sentiment_analysis</title>
+    <meta name="viewport" content="width=device-width, user-scalable=no"> <!-- disable zoom-->
 	<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/styles.css') }}">
 </head>
 <body>
@@ -9,6 +10,7 @@
 	<header>
 		<div class="container">
             <h2>Sentiment Analysis</h2>
+            <p>The text will be  Analysied one of 3 categories: 1.Negative, 2.Neutral, and 3.Positive</p>
         </div>
 	</header>
 
@@ -32,13 +34,17 @@
 
 	</div>
 
-    <div class="sourcecode">
-
-        <p><a href="{{ "https://github.com/glingden/sentiment_analysis_demo" }}">@SourceCode</a></p>
 
 
+    <footer>
+        <div class="sourcecode">
+            <p>
+                <a href="{{ "https://github.com/glingden/sentiment_analysis_demo" }}">@SourceCode</a>
+                <a href="{{ "https://github.com/glingden/sentiment_analysis_demo" }}">@Jupyter Notebook</a>
+           </p>
+        </div>
 
-	</div>
+    </footer>
 
 	
 	

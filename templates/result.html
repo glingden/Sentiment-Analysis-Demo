@@ -2,6 +2,7 @@
 <html>
 <head>
 	<title></title>
+    <meta name="viewport" content="width=device-width, user-scalable=no"> <!-- disable zoom-->
     <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/styles.css') }}">
 </head>
 <body>
@@ -10,6 +11,7 @@
         <div class="container">
 
             <h2>Predicted Sentiment</h2>
+            <p>The text is Analysied one of 3 categories: 1.Negative, 2.Neutral, and 3.Positive</p>
 
         </div>
 
@@ -33,6 +35,20 @@
             {{ prediction }}
 
         {% endif %}
+
+
+	</div>
+
+
+
+  <footer>
+   <div class="sourcecode">
+
+        <p>
+            <a href="{{ "https://github.com/glingden/sentiment_analysis_demo" }}">@SourceCode</a>
+            <a href="{{ "https://github.com/glingden/sentiment_analysis_demo" }}">@Juputer Notebook</a>
+        </p>
+   </footer>
 
 
 	</div>
