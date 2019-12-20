@@ -11,9 +11,8 @@ from langdetect import detect
 import pickle
 
 #load models
-tfidf_object =  pickle.load(open('Models/tfidf_vect', 'rb')) #tfidf vectorizer
-model =  pickle.load(open('Models/final_logistic', 'rb')) # predicted model
-
+tfidf_object =  pickle.load(open('/Users/gangalingden/Desktop/ML-Flask-App/Models/tfidf_vect', 'rb')) #tfidf vectorizer
+model =  pickle.load(open('/Users/gangalingden/Desktop/ML-Flask-App/Models/final_logistic', 'rb')) # predicted model
 
 
 app = Flask(__name__)
@@ -36,15 +35,22 @@ def predict():
         if text:
 
             #check language
-            if detect(text) == 'en':
-                clean_text = text_cleaning(text) #clean text
-                matrix = tfidf_object.transform([clean_text]) #convet into matrix
-                predict_value = model.predict(matrix) # predict sentiment
-                return render_template('result.html', prediction=predict_value)
+            if len(text.split()) >3:
+                if detect(text) == 'en':
+                    clean_text = text_cleaning(text) #clean text
+                    print(clean_text)
+                    matrix = tfidf_object.transform([clean_text]) #convet into matrix
+                    predict_value = model.predict(matrix) # predict sentiment
+                    return render_template('result.html', prediction=predict_value)
 
+                else:
+                    return render_template('result.html', prediction='Only work for English Lanuage !!')
             else:
-                return render_template('result.html', prediction='Only work for English Lanuage !!')
-
+                clean_text = text_cleaning(text)  # clean text
+                print(clean_text)
+                matrix = tfidf_object.transform([clean_text])  # convet into matrix
+                predict_value = model.predict(matrix)  # predict sentiment
+                return render_template('result.html', prediction=predict_value)
 
 
         else:
