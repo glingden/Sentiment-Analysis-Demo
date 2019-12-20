@@ -15,6 +15,7 @@ contractions_re = re.compile('(%s)' % '|'.join(contraction_dict.keys()))  # use 
 
 
 
+#expand contraction words
 def expand_contractions(text, contractions):
     """
     Function to expand contraction words into two-words(e.g. 'can't' -->> 'can not')
