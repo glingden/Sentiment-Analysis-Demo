@@ -6,7 +6,7 @@ Jinja2==2.11.3
 joblib==0.14.1
 langdetect==1.0.7
 MarkupSafe==1.1.1
-nltk==3.4.5
+nltk==3.6.6
 numpy==1.22.0
 pi==0.1.2
 scikit-learn==0.22
