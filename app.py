@@ -25,10 +25,10 @@ app = Flask(__name__)
 
 
 @app.route('/')
-def home():
-    """Renders the home page of the web app."""
+def index():
+    """Renders the index page of the web app."""
 
-    return render_template('home.html')
+    return render_template('index.html')
 
 
 @app.route('/predict',methods=['POST'])
