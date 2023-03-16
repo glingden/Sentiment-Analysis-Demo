@@ -1,58 +1,60 @@
-
-body{
-	font:15px/1.5 Arial, Helvetica,sans-serif;
-	padding: 0px;
+body {
+	font-family: "American Typewriter", Courier, monospace;
+	font-size: 30px;
+	line-height: 1.5;
+	padding: 0;
 	background-color: #fff9ff;
 }
 
-
 /* header */
-header{
+header {
 	background: #bfbcbc;
 	height: 10%;
 	width: 100%;
 	padding: 5% 0;
-    border-radius: 10px;
-
-
+	border-radius: 10px;
 }
+
+/* .sentiment-neutral {
+	display: inline-block;
+}
+
+.sentiment-neutral + span {
+	display: block;
+	margin-top: 10px;
+	font-size: 14px;
+} */
 
 /*center header's text */
-header h2, p{
-	text-align:center;
+header h2,
+p {
+	text-align: center;
 	color: #020202;
-
 }
 
-.ml-container{
+.ml-container {
 	width: 100%;
 	margin: 7% auto;
 	overflow: hidden;
 }
 
-
 /* form */
-form{
-    margin: 0 auto;
-    text-align: center;
-
+form {
+	margin: 0 auto;
+	text-align: center;
 }
-
 
 /* text area */
 textarea {
-
 	width: 300px;
-    height: 100px;
+	height: 100px;
 	border-radius: 5px;
-
-
 }
 
 /* click button */
 .btn-info {
 	text-align: center;
-	background-color: #2196F3;
+	background-color: #2196f3;
 	height: 40px;
 	width: 100px;
 	border-radius: 5px;
@@ -65,23 +67,19 @@ textarea {
 	background: #54ffc5;
 }
 
-
 /* predicted page */
-.results{
+.results {
 	border-radius: 5px;
-    margin: 10% auto;
-    text-align: center;
-
+	margin: 10% auto;
+	text-align: center;
 }
-
 
 footer {
-	height:100px;
-    margin-top:auto;
+	height: 100px;
+	margin-top: auto;
 }
 
-.sourcecode{
-    margin:  5% auto;
-    text-align: center;
-
+.sourcecode {
+	margin: 5% auto;
+	text-align: center;
 }
