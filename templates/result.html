@@ -9,49 +9,51 @@
 
 	<header>
         <div class="container">
-
             <h2>Predicted Sentiment</h2>
-            <p>The text is Analysied one of 3 categories: 1.Negative, 2.Neutral, and 3.Positive</p>
-
+            <p>
+                The input text has been assessed and classified into one of three sentiment categories: 
+                <span class="sentiment-negative">Negative</span>, 
+                <span class="sentiment-neutral">Neutral</span>, or 
+                <span class="sentiment-positive">Positive</span>.
+            </p>
         </div>
+    </header>
+    
+    <div class="results">
+        {% if prediction == 1 %}
+        <span class="sentiment-negative">Negative 😞, </span>
+        <span>{{ try_again }}</span>
 
-	</header>
+        {% elif prediction == 3 %}
+        <span class="sentiment-neutral">Neutral 😐, </span> 
+        <span>{{ try_again }}</span>
 
-	<div class="results">
+        {% elif prediction == 5 %}
+        <span class="sentiment-positive">Positive 😄, </span>
+        <span>{{ try_again }}</span>
 
-
-
-         <!-- check predicted values -->
-        {% if prediction == 1  %}
-        {{ 'Negative' }}
-
-        {%  elif prediction == 3  %}
-        {{ 'Neutral' }}
-
-        {% elif prediction == 5  %}
-        {{ 'Positive' }}
-
-            {% else  %}
-            {{ prediction }}
-
+        {% else %}
+        {{ prediction }}
         {% endif %}
 
-
-	</div>
-
-
-
-  <footer>
-   <div class="sourcecode">
-
-        <p>
-            <a href="{{ "https://github.com/glingden/sentiment_analysis_demo" }}">@SourceCode</a>
-            <a href="{{ "https://glingden.github.io/datascience_html/sentiment_analysis.html" }}">@Jupyter Notebook</a>
-        </p>
-   </footer>
+        <div class="back">
+            <a href="{{ url_for('home') }}">Go back
+            </a>
+        </div>    
+    </div>
+  
 
 
-	</div>
+
+    <footer>
+        <div class="sourcecode">
+            <p>
+                <a href="{{ "https://github.com/glingden/sentiment_analysis_demo" }}">@SourceCode</a>
+                <a href="{{ "https://glingden.github.io/datascience_html/sentiment_analysis.html" }}">@Jupyter Notebook</a>
+            </p>
+        </div>
+    </footer>
+
 
 </body>
 </html>
